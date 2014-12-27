@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kaomoji</title>
+<link rel="stylesheet" type="text/css" href="kaomoji.css">
+<script type="application/x-javascript" src="jquery.js"></script>
+<script type="application/x-javascript" src="selectText.js"></script>
+<script type="text/javascript">
+  function send(name, data){
+    var event = document.createEvent('CustomEvent');
+    event.initCustomEvent(name, true, true, data);
+    document.documentElement.dispatchEvent(event);
+  }
+
+  $(document).ready(function () {
+    $(".kaomoji").click(function () {
+      $(this).selectText();
+      send("copy", $(this).text());
+    });
+  });
+</script>
+</head>
+<body>
+<div class="kaomoji">(￣ω￣)</div><br/>
+<div class="kaomoji">(￣▽￣)</div><br/>
+<div class="kaomoji">(♡ﾟ▽ﾟ♡)</div><br/>
+<div class="kaomoji">(￣ε￣＠)</div><br/>
+</body>
+</html>
