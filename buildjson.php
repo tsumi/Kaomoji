@@ -17,7 +17,7 @@ $category["sections"]=array($section);
 $kaomoji['category'][]=$category;
 $section=array();
 $section["id"]="ebarrassment";
-$section["kaomoji"]=array("(*^ω^)", "(*^ω^)");
+$section["kaomoji"]=array("(⌒_⌒;)", "(o^ ^o)", "(*/ω＼)", "(*/_＼)", "(*ﾉωﾉ)", "(o-_-o)", "(ᵔ.ᵔ)", "(*ﾉ∀`*)", "(//▽//)", "(//ω//)", "(ノ*ﾟ▽ﾟ*)", "(*^.^*)", "(〃￣ω￣〃ゞ", "(#｀ε´#ゞ", "(o・・o)/", "⁄(⁄ ⁄•⁄-⁄•⁄ ⁄)⁄", "(∗∕ ∕•̥̥̥̥∕ω∕•̥̥̥̥∕)", "ԅ[ •́ ﹏├┬┴┬┴", "ヾ(〃ﾟーﾟ〃)ノ", "(●///▽///●)");
 $category["sections"]=array($section);
 $kaomoji['category'][]=$category;
 
