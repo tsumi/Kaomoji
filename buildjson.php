@@ -26,8 +26,8 @@ $category=array();
 $category["id"]="negative";
 
 $section=array();
-$section["id"]="cry";
-$section["kaomoji"]=array("(*^ω^)", "(*^ω^)");
+$section["id"]="sad";
+$section["kaomoji"]=array("( ≧Д≦)", "( p_q)", "((´д｀))", "(╯︵╰,)", "(✖╭╮✖)", "ヽ(´□｀。)ﾉ 	", ".·´¯`(>▂<)´¯`·.", "｡･ﾟﾟ･(>д<)･ﾟﾟ･｡", "｡ﾟ( ﾟஇ‸இﾟ)ﾟ｡", "（ ＴДＴ）", "(-̩̩̩-̩̩̩-̩̩̩-̩̩̩-̩̩̩___-̩̩̩-̩̩̩-̩̩̩-̩̩̩-̩̩̩) 	", "（；_・）", "(′︿‵｡)", "(━┳━ _ ━┳━)", "(╥_╥)", "(个_个)", "╥﹏╥", "o(╥﹏╥)o", "ಥ_ಥ", "(*꒦ິ⌓꒦ີ)", "o(TﾍTo)", "●︿●");
 $category["sections"]=array($section);
 
 $kaomoji['category'][]=$category;
