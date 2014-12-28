@@ -1,9 +1,15 @@
 body{margin:0;padding:0;border:0;}
 p{margin:0;margin-bottom:1px;}
-#menu{width:600px;height:49px;background-color:#bbbbbb;padding:0px 0px 0px 5px;border-bottom:1px solid #666666;}
-.button{width:85px;height:40px;margin:5px 5px 0px 0px;padding:5px 5px 0px 5px;font-size:12px;float:left;text-align:center;color:#000000;border-radius:5px 5px 0px 0px;}
-.button:hover, .selected{width:83px;height:38px;background-color:#d6d6d6;color:#000000;border-top:1px solid #666666;border-left:1px solid #666666;border-right:1px solid #666666;border-bottom:1px solid #d6d6d6;}
-.content{width:605px;height:550px;overflow:auto;}
+a{color:#000000;text-decoration:none;}
+#menu{width:480px;height:49px;background-color:#bbbbbb;padding:0px 0px 0px 5px;border-bottom:1px solid #666666;}
+.button{width:65px;height:40px;font-size:11px;margin:5px 5px 0px 0px;padding:5px 5px 0px 5px;float:left;text-align:center;color:#000000;border-radius:5px 5px 0px 0px;}
+.button:hover, .selected{width:63px;height:38px;background-color:#d6d6d6;color:#000000;border-top:1px solid #666666;border-left:1px solid #666666;border-right:1px solid #666666;border-bottom:1px solid #d6d6d6;}
+#list{width:485px;height:350px;overflow:auto;background-color:#d6d6d6;}
+.content{font-size:11px;padding-bottom:5px;}
+.content:after {content:'';display:block;clear: both;}
 .hidden{display:none;}
-.category{}
-.kaomoji{}
+.category{clear:left;padding:15px 0 5px 10px;font-weight:bold;}
+.category:first-child{padding-top:5px;} 
+.kaomoji{width:70px;margin:5px 0 0 5px;float:left}
+.kaomoji a{padding:2px;}
+.kaomoji a:hover{background-color:#bbbbbb;border-radius:4px;}
