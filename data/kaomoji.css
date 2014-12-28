@@ -5,8 +5,8 @@ a{color:#000000;text-decoration:none;}
 .button{width:65px;height:40px;font-size:11px;margin:5px 5px 0px 0px;padding:5px 5px 0px 5px;float:left;text-align:center;color:#000000;border-radius:5px 5px 0px 0px;}
 .button:hover, .selected{width:63px;height:38px;background-color:#d6d6d6;color:#000000;border-top:1px solid #666666;border-left:1px solid #666666;border-right:1px solid #666666;border-bottom:1px solid #d6d6d6;}
 #list{width:485px;height:350px;overflow:auto;background-color:#d6d6d6;}
-.content{font-size:11px;padding-bottom:5px;}
-.content:after {content:'';display:block;clear: both;}
+.section{font-size:11px;padding-bottom:5px;}
+.section:after{content:'';display:block;clear: both;}
 .hidden{display:none;}
 .category{clear:left;padding:15px 0 5px 10px;font-weight:bold;}
 .category:first-child{padding-top:5px;} 

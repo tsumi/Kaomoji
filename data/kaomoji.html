@@ -12,13 +12,24 @@
   }
 
   $(document).ready(function () {
+    $.getJSON( "kaomoji.json", function( data ) {
+      $.each( data.category, function( id, category ) {
+        $.each( category.sections, function( id, section ) {
+          $("#cat_"+category.id+"_section").append('<div class="category">- '+section.id+'</div>');
+          $.each( section.kaomoji, function( id, kaomoji ) {
+            $("#cat_"+category.id+"_section").append('<div class="kaomoji"><a href="#">'+kaomoji+'</a></div>');
+          });
+        });
+      });
+    });
+
     $(".button").click(function() {
       $(".button").removeClass("selected");
       $("#"+$(this).attr("id")).addClass("selected");
-      $(".content").addClass("hidden");
-      $("#"+$(this).attr("id")+"_content").removeClass("hidden");
+      $(".section").addClass("hidden");
+      $("#"+$(this).attr("id")+"_section").removeClass("hidden");
     });
-    $(".kaomoji").children().click(function() {
+    $(document).on("click", ".kaomoji a", function() {
       send("copy", $(this).text());
       return false;
     });
@@ -27,129 +38,20 @@
 </head>
 <body>
 <div id="menu">
-  <div class="button selected" id="cat_positive"><p>(￣ω￣)</p><p>Positive</p></div>
-  <div class="button" id="cat_negative"><p>(＃＞＜)</p><p>Negative</p></div>
-  <div class="button" id="cat_neutral"><p>(-_-;)・・・</p><p>Neutral</p></div>
-  <div class="button" id="cat_animals"><p>(=^‥^=)</p><p>Animals</p></div>
-  <div class="button" id="cat_actions"><p>|ω･)ﾉ</p><p>Actions</p></div>
-  <div class="button" id="cat_others"><p>(－‸ლ)</p><p>Others</p></div>
+<div class="button selected" id="cat_positive"><p>(￣ω￣)</p><p>Positive</p></div>
+<div class="button" id="cat_negative"><p>(＃＞＜)</p><p>Negative</p></div>
+<div class="button" id="cat_neutral"><p>(-_-;)・・・</p><p>Neutral</p></div>
+<div class="button" id="cat_animals"><p>(=^‥^=)</p><p>Animals</p></div>
+<div class="button" id="cat_actions"><p>|ω･)ﾉ</p><p>Actions</p></div>
+<div class="button" id="cat_others"><p>(－‸ლ)</p><p>Others</p></div>
 </div>
 <div id="list">
-  <div class="content" id="cat_positive_content">
-
-<div class="category">- Joy</div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="category">- Happy</div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="category">- Love</div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-<div class="kaomoji"><a href="#">(￣ω￣)</a></div>
-<div class="kaomoji"><a href="#">(￣▽￣)</a></div>
-<div class="kaomoji"><a href="#">(♡ﾟ▽ﾟ♡)</a></div>
-<div class="kaomoji"><a href="#">(￣ε￣＠)</a></div>
-
-
-  </div>
-  <div class="content hidden" id="cat_negative_content">
-
-
-  </div>
-  <div class="content hidden" id="cat_neutral_content">
-
-
-  </div>
-  <div class="content hidden" id="cat_animals_content">
-
-
-  </div>
-  <div class="content hidden" id="cat_actions_content">
-
-
-  </div>
-  <div class="content hidden" id="cat_others_content">
-
-
-  </div>
+<div class="section" id="cat_positive_section"></div>
+<div class="section hidden" id="cat_negative_section"></div>
+<div class="section hidden" id="cat_neutral_section"></div>
+<div class="section hidden" id="cat_animals_section"></div>
+<div class="section hidden" id="cat_actions_section"></div>
+<div class="section hidden" id="cat_others_section"></div>
 </div>
 </body>
 </html>
