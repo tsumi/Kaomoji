@@ -71,8 +71,8 @@ $category["id"]="animals";
 $category["sections"]=array();
 
 $section=array();
-$section["id"]="cry";
-$section["kaomoji"]=array("(*^ω^)", "(*^ω^)");
+$section["id"]="cats";
+$section["kaomoji"]=array("（ΦωΦ）", "( =①ω①=) ", "(^・ω・^ )", "(=^-ω-^=)", "=＾● ⋏ ●＾=", "((ΦωΦ))", "(*ΦωΦ*)", "(^･o･^)ﾉ”", "(ΦзΦ)", "₍˄·͈༝·͈˄₎◞ ̑̑ෆ⃛", "(^･ｪ･^)");
 $category["sections"][]=$section;
 
 $kaomoji['category'][]=$category;
