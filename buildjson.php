@@ -78,6 +78,10 @@ $section=array();
 $section["id"]="dogs";
 $section["kaomoji"]=array("∪＾ェ＾∪", "∪･ω･∪", "∪･ｪ･∪", "(❍ᴥ❍ʋ)", "ᕙ༼◕ ᴥ ◕༽ᕗ", "●ᴥ●", "| * O ᴥ O * |", "( ͡° ᴥ ͡°)");
 $category["sections"][]=$section;
+$section=array();
+$section["id"]="monkeys";
+$section["kaomoji"]=array("((๑✧ꈊ✧๑))", "@・ꈊ・@", "@( o･ꎴ･)@", "@( o･ｪ･)@", "└@(･ｪ･)@┐", "(((ლ(͏ ͒ • ꈊ • ͒)ლ)))♡", "@(/o･ｪ･o)@/", "- =͟͟͞͞(●⁰ꈊ⁰● |||)", "@(･o･)@", "@(･ェ･)@", "@(･-･)@", "“(@･｡･@)/", "@(｡･◇･)@");
+$category["sections"][]=$section;
 
 $kaomoji['category'][]=$category;
 
