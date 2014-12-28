@@ -47,8 +47,8 @@ $category["id"]="neutral";
 $category["sections"]=array();
 
 $section=array();
-$section["id"]="cry";
-$section["kaomoji"]=array("(*^ω^)", "(*^ω^)");
+$section["id"]="indifference";
+$section["kaomoji"]=array("ヽ(ー_ー )ノ", "ヽ(´ー｀)┌", "╮(￣_￣)╭", "╮(︶︿︶)╭", "┐( ˘ ､ ˘ )┌");
 $category["sections"][]=$section;
 
 $kaomoji['category'][]=$category;
