@@ -58,6 +58,10 @@ $section=array();
 $section["id"]="doubt";
 $section["kaomoji"]=array("(￢_￢)", "(→_→)", "(←_←)", "(¬_¬ )", "(￢‿￢ )", "(↼_↼)", "(⇀_⇀)");
 $category["sections"][]=$section;
+$section=array();
+$section["id"]="surplised";
+$section["kaomoji"]=array("w(ﾟｏﾟ)w", "(⊙_⊙)", "(□_□)", "(ﾟロﾟ) !", "( ꒪Д꒪)ノ", "L(・o・)」", "(´⊙ω⊙`)！", "(*ﾟﾛﾟ)", "（゜◇゜）", "(ﾉﾟ0ﾟ)ﾉ~", "⊙▂⊙", "٩(⌯꒦ິ̆ᵔ꒦ິ)۶ᵒᵐᵍᵎᵎᵎ", "(ᵒ̤̑ ₀̑ ᵒ̤̑)wow!*✰", "☉̥̆ Ô☉̥̆", "˶⍤⃝˶꒳ᵒ꒳ᵎᵎᵎ", "Σ (　 Д )ﻌﻌﻌﻌ⊙ ⊙", "◟(◔ั₀◔ั )◞ ༘♡");
+$category["sections"][]=$section;
 
 $kaomoji['category'][]=$category;
 
