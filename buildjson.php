@@ -51,8 +51,12 @@ $section["id"]="indifference";
 $section["kaomoji"]=array("ヽ(ー_ー )ノ", "ヽ(´ー｀)┌", "╮(￣_￣)╭", "╮(︶︿︶)╭", "┐( ˘ ､ ˘ )┌");
 $category["sections"][]=$section;
 $section=array();
-$section["id"]="confision";
+$section["id"]="confusion";
 $section["kaomoji"]=array("(゜-゜)", " 	(-_-;)・・・", " 	(・_・ヾ", "(・・;)ゞ", "(・・ ) ?", "(•ิ_•ิ)?", " 	(◎ ◎)ゞ", "(•ิ_•ิ)?", "｢(ﾟﾍﾟ)", "(｀_´)ゞ", "｡(*^▽^*)ゞ", "(」゜ロ゜)」", "(^～^;)ゞ", "(⊙.☉)7", "(●__●)", "(●´ω｀●)ゞ 	", "(☉_☉)", "(♠_♦)", "(屮゜Д゜)屮", "﴾͡๏̯͡๏﴿", "●.◉", "⁀⊙﹏☉⁀ 	", "(❀｣╹□╹)｣*･", "ɿ(｡･ɜ･)ɾⓌⓗⓨ？", "ɿ(｡･ɜ･)ɾⓌⓗⓐⓣ？", "( ｣｡╹o╹｡)｣", "(」ﾟﾛﾟ)｣NOOOooo━", "( -_・)?");
+$category["sections"][]=$section;
+$section=array();
+$section["id"]="doubt";
+$section["kaomoji"]=array("(￢_￢)", "(→_→)", "(←_←)", "(¬_¬ )", "(￢‿￢ )", "(↼_↼)", "(⇀_⇀)");
 $category["sections"][]=$section;
 
 $kaomoji['category'][]=$category;
