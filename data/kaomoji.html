@@ -15,7 +15,7 @@
     $.getJSON( "kaomoji.json", function( data ) {
       $.each( data.category, function( id, category ) {
         $.each( category.sections, function( id, section ) {
-          $("#cat_"+category.id+"_section").append('<div class="category">- '+section.id+'</div>');
+          $("#cat_"+category.id+"_section").append('<div class="clear"></div><div class="category">'+section.id+'</div>');
           $.each( section.kaomoji, function( id, kaomoji ) {
             $("#cat_"+category.id+"_section").append('<div class="kaomoji"><a href="#">'+kaomoji+'</a></div>');
           });

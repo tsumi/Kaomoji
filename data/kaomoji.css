@@ -8,8 +8,9 @@ a{color:#000000;text-decoration:none;}
 .section{font-size:11px;padding-bottom:5px;}
 .section:after{content:'';display:block;clear: both;}
 .hidden{display:none;}
-.category{clear:left;padding:15px 0 5px 10px;font-weight:bold;}
-.category:first-child{padding-top:5px;} 
-.kaomoji{width:140px;margin:5px 0 0 5px;float:left;line-height:14px;}
+.clear{clear:left;}
+.category{clear:left;padding:15px 0 5px 0;margin:10px 10px 0px 10px;font-weight:bold;text-align:center;border-top:1px dashed #999999;}
+.category:nth-child(2){padding-top:5px;margin-top:0;border-top:0;}
+.kaomoji{width:140px;margin:5px 0 0 5px;float:left;line-height:14px;text-align:center;}
 .kaomoji a{padding:2px;}
 .kaomoji a:hover{background-color:#bbbbbb;border-radius:4px;}
