@@ -112,7 +112,11 @@ $section["kaomoji"]=array("C= C= C= C= C=┌(;・ω・)┘", "─=≡Σ((( つ�
 $category["sections"][]=$section;
 $section=array();
 $section["id"]="sleeping";
-$section["kaomoji"]=array("(∪｡∪)｡｡｡zzZ", "(－ω－) zzZ", "(( _ _ ))..zzzZZ");
+$section["kaomoji"]=array("(∪｡∪)｡｡｡zzZ", "(－ω－) zzZ", "(( _ _ ))..zzzZZ", "٩(ˊ〇ˋ*)و");
+$category["sections"][]=$section;
+$section=array();
+$section["id"]="others";
+$section["kaomoji"]=array("(－‸ლ)", "( • )( • )ԅ(‾⌣‾ԅ)", "(っ˘ڡ˘ς)", "( ˘▽˘)っ♨");
 $category["sections"][]=$section;
 
 $kaomoji['category'][]=$category;
