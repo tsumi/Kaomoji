@@ -110,6 +110,10 @@ $section=array();
 $section["id"]="running";
 $section["kaomoji"]=array("C= C= C= C= C=┌(;・ω・)┘", "─=≡Σ((( つ＞＜)つ", "ε=ε=ε=ε=┌(;￣▽￣)┘", "ε=ε=┌( >_<)┘", "ε===(っ≧ω≦)っ", "ヽ(￣д￣;)ノ=3=3=3", "。。。ミヽ(。＞＜)ノ", "ε===(っ≧ω≦)っ", "ε=ε=(っ*´□`)っ");
 $category["sections"][]=$section;
+$section=array();
+$section["id"]="sleeping";
+$section["kaomoji"]=array("(∪｡∪)｡｡｡zzZ", "(－ω－) zzZ", "(( _ _ ))..zzzZZ");
+$category["sections"][]=$section;
 
 $kaomoji['category'][]=$category;
 
