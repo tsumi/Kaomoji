@@ -121,17 +121,5 @@ $category["sections"][]=$section;
 
 $kaomoji['category'][]=$category;
 
-// Category: OTHERS
-$category=array();
-$category["id"]="others";
-$category["sections"]=array();
-
-$section=array();
-$section["id"]="cry";
-$section["kaomoji"]=array("(*^ω^)", "(*^ω^)");
-$category["sections"][]=$section;
-
-$kaomoji['category'][]=$category;
-
 echo json_encode($kaomoji);
 ?>
