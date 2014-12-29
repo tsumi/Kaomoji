@@ -102,6 +102,10 @@ $section=array();
 $section["id"]="hiding";
 $section["kaomoji"]=array("|･ω･)", "ﾍ(･_|", "|ω･)ﾉ", "ヾ(･|", "|д･)", "|▽//)", "┬┴┬┴┤･ω･)ﾉ", "|･д･)ﾉ", "|･ω･`*)ッ");
 $category["sections"][]=$section;
+$section=array();
+$section["id"]="writing";
+$section["kaomoji"]=array("__φ(．．)", "( ￣ー￣)φ__", "__〆(￣ー￣ )", "__φ(．．;)", "ヾ( `ー´)シφ__", "___〆(・∀・)", "( ^▽^)ψ__", "....φ(︶▽︶)φ....", "__φ(◎◎ヘ)");
+$category["sections"][]=$section;
 
 $kaomoji['category'][]=$category;
 
