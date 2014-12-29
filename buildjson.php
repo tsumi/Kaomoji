@@ -98,6 +98,10 @@ $section=array();
 $section["id"]="winking";
 $section["kaomoji"]=array("(^_-)≡☆", "(^ω~)", "☆⌒(≧▽​° )", "☆⌒(ゝ。∂)", "☆～（ゝ。∂）", "( ͡~ ͜ʖ ͡°)", "ಠ‿↼", "(*ゝω・)ﾉ");
 $category["sections"][]=$section;
+$section=array();
+$section["id"]="hiding";
+$section["kaomoji"]=array("|･ω･)", "ﾍ(･_|", "|ω･)ﾉ", "ヾ(･|", "|д･)", "|▽//)", "┬┴┬┴┤･ω･)ﾉ", "|･д･)ﾉ", "|･ω･`*)ッ");
+$category["sections"][]=$section;
 
 $kaomoji['category'][]=$category;
 
