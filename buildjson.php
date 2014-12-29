@@ -91,8 +91,8 @@ $category["id"]="actions";
 $category["sections"]=array();
 
 $section=array();
-$section["id"]="cry";
-$section["kaomoji"]=array("(*^ω^)", "(*^ω^)");
+$section["id"]="apologizing";
+$section["kaomoji"]=array("(シ_ _)シ", "m(_ _)m", "(シ. .)シ", "ʎɹɹos’ɥO ¨●౹౽‥ㆀ", "＿|￣|●", "_/＼○_", "(￣^￣ﾒ)＼(_ _ ;)", "๑•́ㅿ•̀๑) ᔆᵒʳʳᵞ");
 $category["sections"][]=$section;
 
 $kaomoji['category'][]=$category;
