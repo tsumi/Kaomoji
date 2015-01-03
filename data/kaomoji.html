@@ -1,58 +1,102 @@
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Kaomoji</title>
-<link rel="stylesheet" type="text/css" href="kaomoji.css">
-<script type="application/x-javascript" src="jquery.js"></script>
-<script type="text/javascript">
-  function send(name, data){
-    var event = document.createEvent('CustomEvent');
-    event.initCustomEvent(name, true, true, data);
-    document.documentElement.dispatchEvent(event);
-  }
+  <head>
+    <meta charset="UTF-8">
+    <title>Kaomoji</title>
+    <link rel="stylesheet" type="text/css" href="kaomoji.css">
+    <script type="application/x-javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+      function send(name, data){
+        var event = document.createEvent('CustomEvent');
+        event.initCustomEvent(name, true, true, data);
+        document.documentElement.dispatchEvent(event);
+      }
 
-  $(document).ready(function () {
-    $.getJSON( "kaomoji.json", function( data ) {
-      $.each( data.category, function( id, category ) {
-        $.each( category.sections, function( id, section ) {
-          $("#cat_"+category.id+"_section").append('<div class="clear"></div><div class="category">'+section.id+'</div>');
-          $.each( section.kaomoji, function( id, kaomoji ) {
-            $("#cat_"+category.id+"_section").append('<div class="kaomoji"><a href="#">'+kaomoji+'</a></div>');
+      $(document).ready(function () {
+        $.getJSON( "kaomoji.json", function( data ) {
+          $.each( data.category, function( id, category ) {
+            $.each( category.sections, function( id, section ) {
+              $.each( section.kaomoji, function( id, kaomoji ) {
+                $("#section_"+section.id).append('<div class="kaomoji"><a href="#">'+kaomoji+'</a></div>');
+              });
+            });
           });
         });
-      });
-    });
 
-    $(".button").click(function() {
-      $(".button").removeClass("selected");
-      $("#"+$(this).attr("id")).addClass("selected");
-      $(".section").addClass("hidden");
-      $("#"+$(this).attr("id")+"_section").removeClass("hidden");
-    });
-    $(document).on("click", ".kaomoji a", function() {
-      send("copy", $(this).text());
-      $("#tooltip").children().text($(this).text()+" copied to clipboard");
-      $("#tooltip").fadeIn(400).delay(1000).fadeOut(400);
-      return false;
-    });
-  });
-</script>
-</head>
-<body>
-<div id="menu">
-<div class="button selected" id="cat_positive"><p>(￣ω￣)</p><p>Positive</p></div>
-<div class="button" id="cat_neutral"><p>(￢_￢)</p><p>Neutral</p></div>
-<div class="button" id="cat_negative"><p>(＃＞＜)</p><p>Negative</p></div>
-<div class="button" id="cat_animals"><p>(=^‥^=)</p><p>Animals</p></div>
-<div class="button" id="cat_actions"><p>|ω･)ﾉ</p><p>Actions</p></div>
-</div>
-<div id="list">
-<div id="tooltip"><span></span></div>
-<div class="section" id="cat_positive_section"></div>
-<div class="section hidden" id="cat_neutral_section"></div>
-<div class="section hidden" id="cat_negative_section"></div>
-<div class="section hidden" id="cat_animals_section"></div>
-<div class="section hidden" id="cat_actions_section"></div>
-</div>
-</body>
+        $(".button").click(function() {
+          $(".button").removeClass("selected");
+          $("#"+$(this).attr("id")).addClass("selected");
+          $(".section").addClass("hidden");
+          $("#"+$(this).attr("id")+"_section").removeClass("hidden");
+        });
+        $(document).on("click", ".kaomoji a", function() {
+          send("copy", $(this).text());
+          $("#tooltip").children().text($(this).text()+" copied to clipboard");
+          $("#tooltip").fadeIn(400).delay(1000).fadeOut(400);
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="menu">
+      <div class="button selected" id="cat_positive"><p>(￣ω￣)</p><p data-l10n-id="cat_positive"></p></div>
+      <div class="button" id="cat_neutral"><p>(￢_￢)</p><p data-l10n-id="cat_neutral"></p></div>
+      <div class="button" id="cat_negative"><p>(＃＞＜)</p><p data-l10n-id="cat_negative"></p></div>
+      <div class="button" id="cat_animals"><p>(=^‥^=)</p><p data-l10n-id="cat_animals"></p></div>
+      <div class="button" id="cat_actions"><p>|ω･)ﾉ</p><p data-l10n-id="cat_actions"></p></div>
+    </div>
+    <div id="list">
+      <div id="tooltip"><span></span></div>
+      <div class="section" id="cat_positive_section">
+        <div class="clear"></div><div class="category" data-l10n-id="section_joy"></div>
+        <div id="section_joy"></div>
+        <div class="clear"></div><div class="category" data-l10n-id="section_love"></div>
+        <div id="section_love"></div>
+        <div class="clear"></div><div class="category" data-l10n-id="section_ebarrassment"></div>
+        <div id="section_ebarrassment"></div>
+      </div>
+      <div class="section hidden" id="cat_neutral_section">
+        <div class="clear"></div><div class="category" data-l10n-id="section_indifference"></div>
+        <div id="section_indifference"></div>
+        <div class="clear"></div><div class="category" data-l10n-id="section_confusion"></div>
+        <div id="section_confusion"></div>
+        <div class="clear"></div><div class="category" data-l10n-id="section_doubt"></div>
+        <div id="section_doubt"></div>
+        <div class="clear"></div><div class="category" data-l10n-id="section_surplised"></div>
+        <div id="section_surplised"></div>
+      </div>
+      <div class="section hidden" id="cat_negative_section">
+        <div class="clear"></div><div class="category" data-l10n-id="section_sad"></div>
+        <div id="section_sad"></div>
+        <div class="clear"></div><div class="category" data-l10n-id="section_angry"></div>
+        <div id="section_angry"></div>
+        <div class="clear"></div><div class="category" data-l10n-id="section_worried"></div>
+        <div id="section_worried"></div>
+      </div>
+      <div class="section hidden" id="cat_animals_section">
+        <div class="clear"></div><div class="category" data-l10n-id="section_cats"></div>
+        <div id="section_cats"></div>
+        <div class="clear"></div><div class="category" data-l10n-id="section_dogs"></div>
+        <div id="section_dogs"></div>
+        <div class="clear"></div><div class="category" data-l10n-id="section_monkeys"></div>
+        <div id="section_monkeys"></div>
+      </div>
+      <div class="section hidden" id="cat_actions_section">
+        <div class="clear"></div><div class="category" data-l10n-id="section_apologizing"></div>
+        <div id="section_apologizing"></div>
+        <div class="clear"></div><div class="category" data-l10n-id="section_winking"></div>
+        <div id="section_winking"></div>
+        <div class="clear"></div><div class="category" data-l10n-id="section_hiding"></div>
+        <div id="section_hiding"></div>
+        <div class="clear"></div><div class="category" data-l10n-id="section_writing"></div>
+        <div id="section_writing"></div>
+        <div class="clear"></div><div class="category" data-l10n-id="section_running"></div>
+        <div id="section_running"></div>
+        <div class="clear"></div><div class="category" data-l10n-id="section_sleeping"></div>
+        <div id="section_sleeping"></div>
+        <div class="clear"></div><div class="category" data-l10n-id="section_others"></div>
+        <div id="section_others"></div>
+      </div>
+    </div>
+  </body>
 </html>
