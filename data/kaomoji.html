@@ -31,6 +31,8 @@
     });
     $(document).on("click", ".kaomoji a", function() {
       send("copy", $(this).text());
+      $("#tooltip").children().text($(this).text()+" copied to clipboard");
+      $("#tooltip").fadeIn(400).delay(1000).fadeOut(400);
       return false;
     });
   });
@@ -45,6 +47,7 @@
 <div class="button" id="cat_actions"><p>|ω･)ﾉ</p><p>Actions</p></div>
 </div>
 <div id="list">
+<div id="tooltip"><span></span></div>
 <div class="section" id="cat_positive_section"></div>
 <div class="section hidden" id="cat_neutral_section"></div>
 <div class="section hidden" id="cat_negative_section"></div>
