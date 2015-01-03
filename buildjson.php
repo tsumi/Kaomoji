@@ -72,7 +72,7 @@ $category["sections"]=array();
 
 $section=array();
 $section["id"]="cats";
-$section["kaomoji"]=array("（ΦωΦ）", "( =①ω①=) ", "(^・ω・^ )", "(=^-ω-^=)", "=＾● ⋏ ●＾=", "((ΦωΦ))", "(*ΦωΦ*)", "(^･o･^)ﾉ”", "(ΦзΦ)", "₍˄·͈༝·͈˄₎◞ ̑̑ෆ⃛", "(^･ｪ･^)");
+$section["kaomoji"]=array("（ΦωΦ）", "( =①ω①=) ", "(^・ω・^ )", "(=^-ω-^=)", "=＾● ⋏ ●＾=", "((ΦωΦ))", "(*ΦωΦ*)", "(^･o･^)ﾉ”", "(ΦзΦ)", "(=^‥^=)", "(^･ｪ･^)");
 $category["sections"][]=$section;
 $section=array();
 $section["id"]="dogs";
