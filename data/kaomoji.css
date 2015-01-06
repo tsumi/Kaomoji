@@ -1,11 +1,11 @@
 body{margin:0;padding:0;border:0;}
 p{margin:0;margin-bottom:1px;}
 a{color:#000000;text-decoration:none;}
-#menu{width:450px;height:49px;background-color:#bbbbbb;padding:0px 0px 0px 5px;border-bottom:1px solid #666666;}
+#menu{height:49px;background-color:#bbbbbb;padding:0px 0px 0px 5px;border-bottom:1px solid #666666;}
 .button{width:60px;height:40px;font-size:11px;margin:5px 5px 0px 0px;padding:5px 5px 0px 5px;float:left;text-align:center;color:#000000;border-radius:5px 5px 0px 0px;}
 .button:hover, .selected{width:58px;height:38px;background-color:#d6d6d6;color:#000000;border-top:1px solid #666666;border-left:1px solid #666666;border-right:1px solid #666666;border-bottom:1px solid #d6d6d6;}
-#list{width:455px;height:350px;overflow:auto;background-color:#d6d6d6;}
-#tooltip{position:absolute;z-index:1000;width:455px;bottom:40px;text-align:center;font-size:11px;font-weight:bold;display:none;}
+#list{height:350px;overflow:auto;background-color:#d6d6d6;}
+#tooltip{position:absolute;z-index:1000;bottom:10px;text-align:center;font-size:11px;font-weight:bold;display:none;width:100%;}
 #tooltip span{background-color:#bbbbbb;border-radius:5px;padding:5px;}
 .section{font-size:11px;padding-bottom:5px;}
 .section:after{content:'';display:block;clear: both;}
@@ -13,6 +13,6 @@ a{color:#000000;text-decoration:none;}
 .clear{clear:left;}
 .category{clear:left;padding:15px 0 5px 0;margin:10px 10px 0px 10px;font-weight:bold;text-align:center;border-top:1px dashed #999999;}
 .category:nth-child(2){padding-top:5px;margin-top:0;border-top:0;}
-.kaomoji{width:140px;margin:5px 0 0 5px;float:left;line-height:14px;text-align:center;}
+.kaomoji{width:135px;margin:5px 0 0 5px;float:left;line-height:14px;text-align:center;color:#000000;}
 .kaomoji a{padding:2px;}
 .kaomoji a:hover{background-color:#bbbbbb;border-radius:4px;}
